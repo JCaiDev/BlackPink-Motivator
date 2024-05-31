@@ -44,3 +44,23 @@
 img {
   margin: 0px 100px;
 }
+
+.night {
+  color: white;
+  background-color: black;
+}
+.day {
+  color: black;
+  background-color: rgb(238, 238, 237);
+}
+
+
+
+
+button:hover,
+button:focus {
+  /* Your custom hover and focus styles */
+  /* For example, change background color */
+  background-color: #a3a7ebfb; /* semi-transparent purple */
+  /* Add any other styles as needed */
+}

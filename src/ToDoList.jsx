@@ -1,3 +1,5 @@
+import React, { Fragment } from "react";
+
 const person = {
     name: 'LaLisa',
     theme: {
@@ -17,15 +19,19 @@ function formatDate(date) {
     ).format(date);
 }
 
-function Task({ name, isComplete}) {
-    return (
-        <li className="task">
-            {name} {isComplete && ' ✔'}
-        </li>
-    ) 
-        
-}
+
 export default function TodoList() {
+    const todos = [{
+        task: 'Meditate',
+        isComplete: true
+    },{
+        task: 'Work on React Project for 45 minutes',
+        isComplete: false
+    } , {
+        task: 'Practice 1 DSA Pattern',
+        isComplete: false
+    }]
+    
     return (
       <div style={person.theme}>
         <h1>Today is {formatDate(today)}</h1>
@@ -36,19 +42,17 @@ export default function TodoList() {
             
         />
         <h1>{person.name} wants you to</h1>
-        
-            <Task
-                isComplete={false}
-                name="Meditate"
-            />    
-            <Task
-                isComplete={true}
-                name="Work on React Project for 45 minutes"
-            />    
-            <Task 
-                isComplete={false}
-                name="Practice 1 DSA pattern"
-            />    
+        <article>
+            {todos.map((todo, i)=>
+                <Fragment key ={i}>
+                    {i > 0 && <hr />}
+                    <p>
+                        {todo.task} {todo.isComplete && ' ✔' }
+                    </p>
+                </Fragment>
+            )}
+
+        </article>
         
       </div>
     );

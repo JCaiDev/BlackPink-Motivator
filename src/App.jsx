@@ -2,12 +2,13 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import React from 'react'
 
 
 import TodoList from './ToDoList.jsx';
-import Clock from './Clock.jsx';
-
-
+import Clock from './Clock.jsx'
+import Toolbar from './Button.jsx';
+import Lightswitch from './Lightswitch.jsx'
 
 
 
@@ -18,11 +19,17 @@ export default function App() {
   return (
     <>
       <div>
-      
-        <TodoList />
-        
-      </div>
 
+        <TodoList />
+        <Clock time={new Date()} />
+
+        <Toolbar
+          buildProject={()=> alert('building!')}
+          interviewPrep={() => alert('DSA-ing!')}
+        />
+        <Lightswitch />
+      </div>
+      
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -36,13 +43,9 @@ export default function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      
     </>
   )
 }

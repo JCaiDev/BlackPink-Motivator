@@ -1,27 +1,27 @@
-export const sculptureList = [{
-    name: 'Homenaje a la Neurocirugía',
-    artist: 'Marta Colvin Andrade',
-    description: 'Although Colvin is predominantly known for abstract themes that allude to pre-Hispanic symbols, this gigantic sculpture, an homage to neurosurgery, is one of her most recognizable public art pieces.',
-    url: 'https://i.imgur.com/Mx7dA2Y.jpg',
-    alt: 'A bronze statue of two crossed hands delicately holding a human brain in their fingertips.'  
+export const blackPinkList = [{
+    name: 'Lisa',
+    artist: 'Lalisa Manobal',
+    description: 'In January 2019, Lisa became the muse of Celine, a French luxury brand. In March 2019, Lisa signed her first solo endorsement deal when she became the new brand presenter for AIS Thailand. In May 2019, Lisa was announced to be the presenter for the Samsung Galaxy S10 in Thailand.',
+    url: 'https://i.imgur.com/KdeCr0Q.png',
+    alt: 'Lalisa'  
   }, {
-    name: 'Floralis Genérica',
-    artist: 'Eduardo Catalano',
-    description: 'This enormous (75 ft. or 23m) silver flower is located in Buenos Aires. It is designed to move, closing its petals in the evening or when strong winds blow and opening them in the morning.',
-    url: 'https://i.imgur.com/ZF6s192m.jpg',
-    alt: 'A gigantic metallic flower sculpture with reflective mirror-like petals and strong stamens.'
+    name: 'Jennie',
+    artist: 'Jennie Kim',
+    description: `Jennie was chosen as the new model for Chanel Beauty and shot her first pictorial for the brand with Harper's Bazaar Korea as their new muse in January 2018. Jennie became the ambassador of Chanel Korea in June and attended the launch of Chanel's new fragrance "Les Eaux De Chanel" in Deauville, France. She met and interviewed Chanel's House perfumer, Olivier Polge, and shot a pictorial for his new collection of fragrances with Cosmopolitan Korea. She became a Chanel Global Ambassador in October after establishing a relationship with Chanel Beauty and attended her first Chanel fashion show as a Korean representative during Paris Fashion Week, sitting in the front row next to Pharrell Williams and Pamela Anderson. In March 2019, the French fashion house official announced Jennie as the Global/House Ambassador of Chanel.`,
+    url: 'https://static.wikia.nocookie.net/blinks/images/5/5f/Jennie_Pre-Debut.jpeg/revision/latest?cb=20170416142831',
+    alt: 'Jennie'
   }, {
-    name: 'Eternal Presence',
-    artist: 'John Woodrow Wilson',
-    description: 'Wilson was known for his preoccupation with equality, social justice, as well as the essential and spiritual qualities of humankind. This massive (7ft. or 2,13m) bronze represents what he described as "a symbolic Black presence infused with a sense of universal humanity."',
-    url: 'https://i.imgur.com/aTtVpES.jpg',
-    alt: 'The sculpture depicting a human head seems ever-present and solemn. It radiates calm and serenity.'
+    name: 'Rosé',
+    artist: 'Park Chaeyoung',
+    description: `In 2018, Rosé and fellow Blackpink member Jisoo were selected as endorsement models for the South Korean cosmetics brand Kiss Me. She has also been invited to various designer launching events and showcases, such as Alessandro Dell'Acqua's Capsule Collection in Gangnam, Alexander McQueen's 2018 fall-winter collection exhibition in Seongdong, and Coach's 2018 pre-fall collection in Shanghai.`,
+    url: 'https://static.wikia.nocookie.net/blinks/images/8/81/Lotteshopping_IG_Update_200918.jpg/revision/latest?cb=20180922035010',
+    alt: 'Rosie'
   }, {
-    name: 'Moai',
-    artist: 'Unknown Artist',
-    description: 'Located on the Easter Island, there are 1,000 moai, or extant monumental statues, created by the early Rapa Nui people, which some believe represented deified ancestors.',
-    url: 'https://i.imgur.com/RCwLEoQm.jpg',
-    alt: 'Three monumental stone busts with the heads that are disproportionately large with somber faces.'
+    name: 'Jisoo',
+    artist: 'Kim Ji-soo',
+    description: `In Gallup Korea's annual music poll for 2018, Jisoo was ranked the tenth most popular idol in South Korea, receiving 4.8% of the votes. In April 2019, she was ranked the 10th most followed K-pop idol on Instagram, with 12.8 million followers.`,
+    url: 'https://static.wikia.nocookie.net/blinks/images/0/08/Jisoo_Harper%27s_Bazaar_Japan_April_2022_7.jpeg/revision/latest?cb=20220319104228',
+    alt: 'Jisoo Flower'
   }, {
     name: 'Blue Nana',
     artist: 'Niki de Saint Phalle',

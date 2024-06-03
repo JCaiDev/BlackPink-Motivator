@@ -8,19 +8,19 @@ export const blackPinkList = [{
     name: 'Jennie',
     artist: 'Jennie Kim',
     description: `Jennie was chosen as the new model for Chanel Beauty and shot her first pictorial for the brand with Harper's Bazaar Korea as their new muse in January 2018. Jennie became the ambassador of Chanel Korea in June and attended the launch of Chanel's new fragrance "Les Eaux De Chanel" in Deauville, France. She met and interviewed Chanel's House perfumer, Olivier Polge, and shot a pictorial for his new collection of fragrances with Cosmopolitan Korea. She became a Chanel Global Ambassador in October after establishing a relationship with Chanel Beauty and attended her first Chanel fashion show as a Korean representative during Paris Fashion Week, sitting in the front row next to Pharrell Williams and Pamela Anderson. In March 2019, the French fashion house official announced Jennie as the Global/House Ambassador of Chanel.`,
-    url: 'https://static.wikia.nocookie.net/blinks/images/5/5f/Jennie_Pre-Debut.jpeg/revision/latest?cb=20170416142831',
+    url: 'https://w0.peakpx.com/wallpaper/204/313/HD-wallpaper-jennie-black-dress-blackpink-black-hair-face-beauty-singer-asian-korean-cute.jpg',
     alt: 'Jennie'
   }, {
     name: 'Rosé',
     artist: 'Park Chaeyoung',
     description: `In 2018, Rosé and fellow Blackpink member Jisoo were selected as endorsement models for the South Korean cosmetics brand Kiss Me. She has also been invited to various designer launching events and showcases, such as Alessandro Dell'Acqua's Capsule Collection in Gangnam, Alexander McQueen's 2018 fall-winter collection exhibition in Seongdong, and Coach's 2018 pre-fall collection in Shanghai.`,
-    url: 'https://static.wikia.nocookie.net/blinks/images/8/81/Lotteshopping_IG_Update_200918.jpg/revision/latest?cb=20180922035010',
+    url: 'https://imgur.com/yMMetlh.jpeg',
     alt: 'Rosie'
   }, {
     name: 'Jisoo',
     artist: 'Kim Ji-soo',
     description: `In Gallup Korea's annual music poll for 2018, Jisoo was ranked the tenth most popular idol in South Korea, receiving 4.8% of the votes. In April 2019, she was ranked the 10th most followed K-pop idol on Instagram, with 12.8 million followers.`,
-    url: 'https://static.wikia.nocookie.net/blinks/images/0/08/Jisoo_Harper%27s_Bazaar_Japan_April_2022_7.jpeg/revision/latest?cb=20220319104228',
+    url: 'https://0.soompi.io/wp-content/uploads/2021/07/07193649/jisoo-3.jpeg',
     alt: 'Jisoo Flower'
   }, {
     name: 'Blue Nana',

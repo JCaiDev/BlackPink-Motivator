@@ -1,26 +1,20 @@
 import React, { Fragment } from "react";
+import { useState } from 'react';
+import { blackPinkList } from "./data";
 
-const person = {
-    name: 'LaLisa',
-    theme: {
-        backgroundColor: 'black',
-        color: 'pink'
-    }
-}
-const avatar = "https://i.imgur.com/KdeCr0Q.png"
-const description = "LaLisa"
 
-const today = new Date();
 
-function formatDate(date) {
-    return new Intl.DateTimeFormat(
-        'en-US',
-        { weekday: 'long' }
-    ).format(date);
-}
+
 
 
 export default function TodoList() {
+    const page = {
+        theme: {
+            backgroundColor: 'black',
+            color: 'pink'
+        }
+    }
+
     const todos = [{
         task: 'Meditate',
         isComplete: true
@@ -32,16 +26,34 @@ export default function TodoList() {
         isComplete: false
     }]
     
+    const [index, setIndex] = useState(0)
+    const [showMore, setShowMore] = useState(false)
+    
+    
+    function handleNextClick() {
+        setIndex(index + 1)
+    }
+    
+    function handleMoreClick() {
+        setShowMore(!showMore)
+    }
+
+
+    let blackPink = blackPinkList[index]
+
     return (
-      <div style={person.theme}>
-        <h1>Today is {formatDate(today)}</h1>
-        <img
-            className="avatar"
-            src={avatar}
-            alt={description}
-            
-        />
-        <h1>{person.name} wants you to</h1>
+      <div style={page.theme}>
+        <h2>{blackPink.artist}</h2>
+        {showMore && <p>{blackPink.description}</p>}
+        
+        <img 
+            onClick={handleMoreClick}
+            src={blackPink.url} 
+            alt={blackPink.alt} 
+            />
+
+        <h1>{blackPink.name} wants you to</h1>
+
         <article>
             {todos.map((todo, i)=>
                 <Fragment key ={i}>
@@ -51,6 +63,13 @@ export default function TodoList() {
                     </p>
                 </Fragment>
             )}
+        <button onClick={handleNextClick}>
+            Next
+        </button>
+        <h3>
+            ({index + 1} of {blackPinkList.length})
+        </h3>
+        
 
         </article>
         

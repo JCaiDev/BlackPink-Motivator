@@ -7,7 +7,7 @@ import React from 'react'
 
 import TodoList from './ToDoList.jsx';
 import Clock from './Clock.jsx'
-import Toolbar from './Button.jsx';
+import Toolbar from './Toolbar.jsx';
 import Lightswitch from './Lightswitch.jsx'
 
 
@@ -20,8 +20,8 @@ export default function App() {
     <>
       <div>
 
-        <TodoList />
         <Clock time={new Date()} />
+        <TodoList />
 
         <Toolbar
           buildProject={()=> alert('building!')}

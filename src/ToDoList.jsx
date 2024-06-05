@@ -29,9 +29,18 @@ export default function TodoList() {
     const [index, setIndex] = useState(0)
     const [showMore, setShowMore] = useState(false)
     
+    let hasNext = index < blackPinkList.length - 1 
+    let hasPrev = index > 0
+    
     
     function handleNextClick() {
-        setIndex(index + 1)
+        if (hasNext) {
+            setIndex(index + 1)
+        }
+    }
+
+    function handlePrevClick() {
+        setIndex(index - 1)
     }
     
     function handleMoreClick() {
@@ -50,7 +59,7 @@ export default function TodoList() {
             onClick={handleMoreClick}
             src={blackPink.url} 
             alt={blackPink.alt} 
-            />
+        />
 
         <h1>{blackPink.name} wants you to</h1>
 
@@ -63,9 +72,14 @@ export default function TodoList() {
                     </p>
                 </Fragment>
             )}
-        <button onClick={handleNextClick}>
+        
+        <button onClick={handlePrevClick} disabled={!hasPrev}>
+            Previous
+        </button>
+        <button onClick={handleNextClick} disabled={!hasNext}>
             Next
         </button>
+        
         <h3>
             ({index + 1} of {blackPinkList.length})
         </h3>

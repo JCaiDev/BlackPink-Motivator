@@ -9,12 +9,13 @@ import TodoList from './ToDoList.jsx';
 import Clock from './Clock.jsx'
 import Toolbar from './Toolbar.jsx';
 import Lightswitch from './Lightswitch.jsx'
+import CounterList from './CounterList.jsx'
 
 
 
 
 export default function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
@@ -28,6 +29,7 @@ export default function App() {
           interviewPrep={() => alert('DSA-ing!')}
         />
         <Lightswitch />
+        <CounterList />
       </div>
       
       <div>

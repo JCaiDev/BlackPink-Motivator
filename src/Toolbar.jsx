@@ -1,11 +1,30 @@
-function Signup() {
+import { useState } from "react"
+
+function TaskSelection() {
+    const [ task, setTask] = useState('')
+    
+    function handleTaskChange(e) {
+        setTask(e.target.value)
+    }
+    function handleReset() {
+        setTask('')
+    }
+    
     return (
         <form onSubmit={e=> {
             e.preventDefault();
-            alert('submitting form!')
+            setIsSent(true)
+            
         }}>
-            <input />
-            <button>Submit</button>
+            <input 
+                placeholder="Enter Task Here"
+                value={task}
+                onChange={handleTaskChange}
+            />
+            <h1>
+                You are currently working on {task}
+            </h1>
+            <button type="submit" onClick={handleReset}>Reset</button>
 
         </form>
     )
@@ -35,7 +54,7 @@ export default function Toolbar({ buildProject, interviewPrep}) {
                 Interview Prep
             </Button>
 
-            <Signup />
+            <TaskSelection />
         </div>
 
     )

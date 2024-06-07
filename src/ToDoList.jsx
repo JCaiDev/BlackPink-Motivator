@@ -19,10 +19,10 @@ export default function TodoList() {
         task: 'Meditate',
         isComplete: true
     },{
-        task: 'Work on React Project for 45 minutes',
+        task: 'React Project',
         isComplete: false
     } , {
-        task: 'Practice 1 DSA Pattern',
+        task: 'Data Structure & Algorithms',
         isComplete: false
     }]
     
@@ -50,6 +50,13 @@ export default function TodoList() {
 
     let blackPink = blackPinkList[index]
 
+    const [isSent, setIsSent] = useState(false);
+    
+    
+    if (isSent) {
+        return <h1>You are currently working on {task}</h1>
+    }
+    
     return (
       <div style={page.theme}>
         <h2>{blackPink.artist}</h2>

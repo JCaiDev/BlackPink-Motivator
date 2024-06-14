@@ -24,10 +24,7 @@ export default function App() {
         <Clock time={new Date()} />
         <TodoList />
 
-        <Toolbar
-          buildProject={()=> alert('building!')}
-          interviewPrep={() => alert('DSA-ing!')}
-        />
+       
         <Lightswitch />
         <CounterList />
       </div>

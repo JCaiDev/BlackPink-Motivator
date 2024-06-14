@@ -34,6 +34,7 @@ export default function CounterList() {
     <ul>
       {counters.map((counter, i) => (
         <li key={i}>
+          {counter}{' '}
           <button onClick={() => {
             handleIncrementClick(i);
             }}>+1
@@ -43,7 +44,6 @@ export default function CounterList() {
             handleDecreaseClick(i);
             }}>-1
           </button>
-          {' '}{counter}
         </li>
       ))}
     </ul>

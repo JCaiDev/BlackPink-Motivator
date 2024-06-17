@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Todo-list {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+}
+
+.Todo-list ul {
+    list-style-type: none;
+    padding: 0
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+     
+}
+
+.task-item span {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.task-item button {
+    background: #81101a;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background .3s ;   
+}
+
+.task-item button:hover {
+    background:#e84118 ;
+}
+
+.add-task{
+    display: flex;
+    margin-top: 20px;
+}
+
+.task-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.add-button {
+    background: #0bbe56;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .add-button:hover {
+    background: #8dfdbc;
+  }
+
+.carousel-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel-button {
+    background: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carousel-button:disabled {
+    background: #d3d3d3;
+}
+
+.carousel-button:hover:not(:disabled) {
+    background: #1c86ee;
+}
+
+.carousel-image {
+    
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}

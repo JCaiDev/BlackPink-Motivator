@@ -1,16 +1,18 @@
 
 import { blackPinkList } from "./data";
 import React, { useState} from 'react'
-
+import './TodoList.css';
 
 
 export default function TodoList() {
     const page = {
         theme: {
             backgroundColor: 'black',
-            color: 'pink'
-        }
-    }
+            color: 'pink',
+            minHeight: '100vh',
+            padding: '20px',
+        },
+    };
 
     
     
@@ -40,9 +42,9 @@ export default function TodoList() {
     
     //To-do-List
     const todos = [
-        { id: 0, task: 'Meditate', isComplete: false },
-        { id: 1, task: 'React Project', isComplete: false }, 
-        { id: 2, task: 'Data Structure & Algorithms', isComplete: false }
+        { id: 0, text: 'Meditate', isComplete: false },
+        { id: 1, text: 'React Project', isComplete: false }, 
+        { id: 2, text: 'Data Structure & Algorithms', isComplete: false }
     ]
 
     const [tasks, setTasks] = useState(todos)
@@ -53,12 +55,12 @@ export default function TodoList() {
         if (taskText.trim() !== "") {
             const newTask = {
                 id: Date.now(),
-                task: taskText.trim(),
+                text: taskText.trim(),
                 isComplete: false
             };
             setTasks([...tasks, newTask])
-            setTaskText('')
         }
+        console.log("task:", tasks)
     }
 
     // toggle task completion
@@ -70,6 +72,7 @@ export default function TodoList() {
             } : task
         );
         setTasks(updatedTasks)
+        
     }
     
     
@@ -88,43 +91,52 @@ export default function TodoList() {
         <img 
             onClick={handleMoreClick}
             src={blackPink.url} 
-            alt={blackPink.alt} 
+            alt={blackPink.alt}
+            className="carousel-image"
         />
 
         <h1>{blackPink.name} wants you to</h1>
 
         
         <div className="Todo-list">
-        <ul>
-            {tasks.map((task) => (
-                <li
-                    key={task.id}
-                    style={{ textDecoration: task.isComplete ? 'line-through' : 'none' }}
-                >
-                    <span onClick={() => toggleTaskCompletion(task.id)}>{task.text}</span>
-                    <button onClick={() => deleteTask(task.id)}>Delete</button>
-                </li>
-            ))}
-        </ul>
-            <input 
-                type='text'
-                value={taskText}
-                onChange={e => setTaskText(e.target.value)}
-            />
+            <ul>
+                {tasks.map((task) => (
+                    <li
+                        key={task.id}
+                        className="task-item"
+                        style={{ textDecoration: task.isComplete ? 'line-through' : 'none' }}
+                    >
+                        <span onClick={() => toggleTaskCompletion(task.id)}>
+                            {task.text}
+                        </span>
+                        <button onClick={() => deleteTask(task.id)}>Delete</button>
+                    </li>
+                ))}
+            </ul>
+            
+            <div className="add-task">
+                <input
+                    type='text'
+                    value={taskText}
+                    onChange={e => setTaskText(e.target.value)}
+                    className="task-input"
+                    placeholder="New Task..."
+                />
 
-            <button onClick={addTask}>
-                Add Task
-            </button>                
+                <button onClick={addTask} className="add-button">
+                    Add Task
+                </button>                
+            </div>
         </div>
 
-
-        <button onClick={handlePrevClick} disabled={!hasPrev}>
-            Previous
-        </button>
-        {' '}
-        <button onClick={handleNextClick} disabled={!hasNext}>
-            Next
-        </button>
+        <div className="carousel-controls">
+            <button onClick={handlePrevClick} disabled={!hasPrev} className="carousel-button">
+                Previous
+            </button>
+            <button onClick={handleNextClick} disabled={!hasNext} className="carousel-button">
+                Next
+            </button>
+        </div>
         
         <h3>
             ({index + 1} of {blackPinkList.length})

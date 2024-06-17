@@ -95,8 +95,18 @@ body {
 }
 
 .carousel-image {
-    
-    height: auto;
+    width: 70%;
+    height: 500px;
     border-radius: 8px;
     margin-top: 20px;
+    object-fit: cover;
+    aspect-ratio: 10 / 9;
+    object-position: top;
+}
+  
+
+@media only screen and (min-width: 1200px) {
+    .carousel-image {
+      width: 80%;
+    }
 }

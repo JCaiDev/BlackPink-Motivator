@@ -93,6 +93,7 @@ export default function TodoList() {
             src={blackPink.url} 
             alt={blackPink.alt}
             className="carousel-image"
+            
         />
 
         <h1>{blackPink.name} wants you to</h1>

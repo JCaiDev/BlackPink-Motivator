@@ -42,9 +42,8 @@ export default function TodoList() {
     
     //To-do-List
     const todos = [
-        { id: 0, text: 'Meditate', isComplete: false },
-        { id: 1, text: 'React Project', isComplete: false }, 
-        { id: 2, text: 'Data Structure & Algorithms', isComplete: false }
+        { id: 0, text: 'Work on Project', isComplete: false },
+        { id: 1, text: 'Study Data Structure & Algorithms', isComplete: false }, 
     ]
 
     const [tasks, setTasks] = useState(todos)

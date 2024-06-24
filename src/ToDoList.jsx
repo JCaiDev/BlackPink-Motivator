@@ -42,8 +42,7 @@ export default function TodoList() {
     
     //To-do-List
     const todos = [
-        { id: 0, text: 'Work on Project', isComplete: false },
-        { id: 1, text: 'Study Data Structure & Algorithms', isComplete: false }, 
+        { id: 0, text: 'Make Reservation at a Michelin-star Restaurant', isComplete: false }, 
     ]
 
     const [tasks, setTasks] = useState(todos)
